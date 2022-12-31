@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:confetti/confetti.dart';
 
 class Joke extends StatefulWidget {
   const Joke({super.key});
@@ -27,6 +28,8 @@ class _JokeState extends State<Joke> {
     });
   }
 
+  late ConfettiController Yay =
+      ConfettiController(duration: Duration(seconds: 3));
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,6 +41,7 @@ class _JokeState extends State<Joke> {
         ),
         onPressed: () {
           setState(() {
+            Yay.play();
             NewJoke();
           });
         },
@@ -45,6 +49,7 @@ class _JokeState extends State<Joke> {
       body: Center(
         child: Column(
           children: [
+            ConfettiWidget(confettiController: Yay),
             Container(
                 height: 200,
                 alignment: Alignment.bottomCenter,

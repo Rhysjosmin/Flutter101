@@ -2,8 +2,10 @@
 
 import 'dart:convert';
 
-import 'package:app/Home.dart';
+import 'package:app/mumsHome.dart';
 import 'package:flutter/material.dart';
+
+import 'Home.dart';
 
 void main() {
   runApp(MyApp());
@@ -19,12 +21,11 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Home(),
+      home: Home2(),
       theme: ThemeData(
-        brightness: Brightness.dark,
-        accentColor: Color.fromARGB(255, 22, 253, 141),
-        canvasColor: Color.fromARGB(0, 0, 0, 0),
-      ),
+          brightness: Brightness.dark,
+          accentColor: Color.fromARGB(255, 22, 253, 141),
+          canvasColor: Colors.deepPurple),
     );
   }
 }

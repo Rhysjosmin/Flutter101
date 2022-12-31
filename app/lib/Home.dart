@@ -26,7 +26,7 @@ class _HomeState extends State<Home> {
           items: [
             BottomNavigationBarItem(
                 icon: Icon(Icons.celebration), label: "Joke"),
-            BottomNavigationBarItem(icon: Icon(Icons.icecream), label: "Draw"),
+            BottomNavigationBarItem(icon: Icon(Icons.draw), label: "Draw"),
             BottomNavigationBarItem(icon: Icon(Icons.tiktok), label: "TikTok"),
           ],
           currentIndex: _selectedPage,
